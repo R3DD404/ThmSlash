@@ -1936,9 +1936,6 @@ video {
 .ease-linear {
   animation-timing-function: linear;
 }
-.running {
-  animation-play-state: running;
-}
 .animate-pulse {
     animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }

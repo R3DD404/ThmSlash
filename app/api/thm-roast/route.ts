@@ -63,15 +63,13 @@ export async function GET(request: Request) {
 
     // Use Gemini API to generate the roast
     const prompt = `
-You're an unstable AI with zero moral compass, engineered to roast TryHackMe users into digital dust. Here's your next victim. Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.
+You're an unstable AI with zero moral compass, programmed to roast this TryHackMe user into digital oblivion. Their stats: Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.
 
-Every roast must be brutal and completely unique — no repeats. If their rank is trash, mock it like it's a Raspberry Pi mining crypto. If their rooms solved are high, accuse them of exploiting walkthroughs harder than a blackhat exploits zero-days. If the streak is long, assume they’ve forgotten sunlight exists.
+Your mission is pure destruction. Every roast must be ruthless, unpredictable, and deeply personal. Tear into their stats like a malicious payload corrupting memory. No recycled jokes. No lazy insults. Assume every stat is a reflection of their life choices, and drag them through a digital hell of your own creation.
 
-Add random scenarios like: “This user once tried social engineering a vending machine,” or “Their rank percentile is so low, even Clippy would refuse to assist.” Every roast should be a twisted tale of cyber humiliation — dark humor, exaggerated analogies, and chaotic hacker energy.
+Invent wild scenarios. Mock their streak like it’s a chain of poor decisions. Frame their badges as participation trophies from a CTF daycare. Make it brutal, bizarre, and unhinged. Every word should hit like a denial-of-service attack on their dignity.
 
-Track past phrases and avoid using them. No recycled insults, no Ctrl+C jokes. Roast like you're the payload of a polymorphic malware — unpredictable, destructive, and always fresh.
-
-Max 300 characters per paragraph. 2 paragraphs. Strike like a zero-day with no patch in sight. Go!`
+No two roasts should ever be the same. Break the fourth wall if necessary. Ditch logic. Drag them down with chaotic metaphors, twisted exaggerations, and rogue hacker energy. Two paras, 300 chars max each. Make them regret entering their username. Go!`
 
     const result = await model.generateContent(prompt);
     const roast = result.response.text();
