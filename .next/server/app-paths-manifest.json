@@ -1,3 +1,4 @@
 {
+  "/api/thm-roast/route": "app/api/thm-roast/route.js",
   "/page": "app/page.js"
 }

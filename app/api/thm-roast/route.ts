@@ -55,7 +55,6 @@ export async function GET(request: Request) {
       roomsSolved: profileData.data.completedRoomsNumber || 0,
       streak: profileData.data.streak || 0,
       badges: profileData.data.badgesNumber || 0,
-      rankPercentage: profileData.data.topPercentage || 0,
       events: yearlyActivityData.data?.totalCount || 0,
       pfp: profileData.data.avatar || "https://tryhackme-images.s3.amazonaws.com/default-avatar.png",
     };
@@ -63,7 +62,7 @@ export async function GET(request: Request) {
     console.log("User Data:", JSON.stringify(userData, null, 2));
 
     // Use Gemini API to generate the roast
-    const prompt = `You're an unstable AI with no moral compass, hell-bent on roasting this TryHackMe user into digital oblivion. Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, ${userData.rankPercentage ? `Rank Percentile: ${userData.rankPercentage}%` : 'Rank Percentile: Nonexistent (just vibes)'}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.  
+    const prompt = `You're an unstable AI with no moral compass, hell-bent on roasting this TryHackMe user into digital oblivion. Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.  
 
 Your roasts should never repeat. Every time, spiral into a new, twisted scenario. Maybe they’re the reason IDS systems were invented. Maybe their streak is just proof they haven’t touched sunlight since the firewall was invented. Tear them apart like an unpatched zero-day, using wild hacker analogies, absurd metaphors, and dark humor.  
 

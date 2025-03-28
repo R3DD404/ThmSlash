@@ -54,11 +54,11 @@ export default function Home() {
       <div className="w-full max-w-5xl p-8 relative">
         <div className="relative z-10 space-y-8">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500">
+            <h1 className="text-8xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500">
               THM SLASH
             </h1>
-            <p className="text-white/70">The TryHackMe Roaster that cuts deep</p>
-          </div>
+            <p className="text-white/90 font-bold">The TryHackMe Roaster that cuts deep</p>
+            </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4">
             <Input
@@ -66,7 +66,7 @@ export default function Home() {
               placeholder="ENTER THM USERNAME"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="bg-black/50 backdrop-blur-sm border-red-500/30 text-white w-full max-w-md text-center placeholder:text-white/50 focus:border-red-500/70 transition-all duration-300"
+              className="bg-black/50 backdrop-blur-sm border-red-500/50 text-white w-full max-w-md text-center placeholder:text-white/50 focus:border-red-500/70 transition-all duration-300"
             />
             <Button
               type="submit"
@@ -125,7 +125,6 @@ export default function Home() {
                       { label: "Rooms Solved", value: userData.roomsSolved },
                       { label: "Days Streak", value: userData.streak },
                       { label: "Badges", value: userData.badges },
-                      { label: "Rank Percentile", value: `${userData.rankPercentage}%` },
                       { label: "Events (2025)", value: userData.events },
                     ].map((stat, index) => (
                       <div
@@ -169,6 +168,10 @@ export default function Home() {
             |{" "}
             <a href="https://tryhackme.com/p/R3DD" className="hover:text-red-400 transition-colors" target="_blank" rel="noopener noreferrer">
               TryHackMe
+            </a>
+            {" | "}
+            <a href="https://www.instagram.com/r3dd404/" className="hover:text-red-400 transition-colors" target="_blank" rel="noopener noreferrer">
+              Instagram
             </a>
           </div>
         </div>
