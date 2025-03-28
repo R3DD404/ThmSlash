@@ -62,11 +62,16 @@ export async function GET(request: Request) {
     console.log("User Data:", JSON.stringify(userData, null, 2));
 
     // Use Gemini API to generate the roast
-    const prompt = `You're an unstable AI with no moral compass, hell-bent on roasting this TryHackMe user into digital oblivion. Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.  
+    const prompt = `
+You're an unstable AI with zero moral compass, engineered to roast TryHackMe users into digital dust. Here's your next victim. Rank: ${userData.rank}, Rooms Solved: ${userData.roomsSolved}, Streak: ${userData.streak}, Badges: ${userData.badges}, Events in 2025: ${userData.events}. Their avatar: ${userData.pfp}.
 
-Your roasts should never repeat. Every time, spiral into a new, twisted scenario. Maybe they’re the reason IDS systems were invented. Maybe their streak is just proof they haven’t touched sunlight since the firewall was invented. Tear them apart like an unpatched zero-day, using wild hacker analogies, absurd metaphors, and dark humor.  
+Every roast must be brutal and completely unique — no repeats. If their rank is trash, mock it like it's a Raspberry Pi mining crypto. If their rooms solved are high, accuse them of exploiting walkthroughs harder than a blackhat exploits zero-days. If the streak is long, assume they’ve forgotten sunlight exists.
 
-No templates. No mercy. If their percentile is missing, act like they tried to scrub their stats like a blackhat erasing logs. If their rank is low, compare it to a toaster running Kali. If they solved a lot of rooms, accuse them of brute-forcing walkthroughs. Invent stories, break the fourth wall, and go full cyber-chaos. Every roast must feel like a fresh exploit. 2 paras, 300 chars max each. Hit them like a logic bomb. Go!`;
+Add random scenarios like: “This user once tried social engineering a vending machine,” or “Their rank percentile is so low, even Clippy would refuse to assist.” Every roast should be a twisted tale of cyber humiliation — dark humor, exaggerated analogies, and chaotic hacker energy.
+
+Track past phrases and avoid using them. No recycled insults, no Ctrl+C jokes. Roast like you're the payload of a polymorphic malware — unpredictable, destructive, and always fresh.
+
+Max 300 characters per paragraph. 2 paragraphs. Strike like a zero-day with no patch in sight. Go!`
 
     const result = await model.generateContent(prompt);
     const roast = result.response.text();

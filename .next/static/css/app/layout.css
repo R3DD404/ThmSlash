@@ -1333,9 +1333,6 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
-.border-red-500\/30 {
-  border-color: rgb(239 68 68 / 0.3);
-}
 .border-red-500\/50 {
   border-color: rgb(239 68 68 / 0.5);
 }
@@ -1345,12 +1342,6 @@ video {
 }
 .border-transparent {
   border-color: transparent;
-}
-.border-red-500\/80 {
-  border-color: rgb(239 68 68 / 0.8);
-}
-.border-red-500\/10 {
-  border-color: rgb(239 68 68 / 0.1);
 }
 .border-l-transparent {
   border-left-color: transparent;
@@ -1627,8 +1618,8 @@ video {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.text-5xl {
-  font-size: 3rem;
+.text-8xl {
+  font-size: 6rem;
   line-height: 1;
 }
 .text-\[0\.8rem\] {
@@ -1653,18 +1644,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
-}
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
 }
 .font-bold {
   font-weight: 700;
@@ -1760,9 +1739,6 @@ video {
 }
 .text-white\/90 {
   color: rgb(255 255 255 / 0.9);
-}
-.text-white\/80 {
-  color: rgb(255 255 255 / 0.8);
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -2125,10 +2101,6 @@ video {
 
 .hover\:bg-secondary\/80:hover {
   background-color: hsl(var(--secondary) / 0.8);
-}
-
-.hover\:bg-red-900\/90:hover {
-  background-color: rgb(127 29 29 / 0.9);
 }
 
 .hover\:from-red-900\/20:hover {
