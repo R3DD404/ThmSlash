@@ -163,11 +163,11 @@ export default function Home() {
 
           <div className="text-center text-sm text-white/70 pt-8">
             Made by R3DD |{" "}
-            <a href="https://twitter.com/R3DD" className="hover:text-red-400 transition-colors">
+            <a href="https://twitter.com/R3DD404" className="hover:text-red-400 transition-colors" target="_blank" rel="noopener noreferrer">
               X
             </a>{" "}
             |{" "}
-            <a href="https://tryhackme.com/p/R3DD" className="hover:text-red-400 transition-colors">
+            <a href="https://tryhackme.com/p/R3DD" className="hover:text-red-400 transition-colors" target="_blank" rel="noopener noreferrer">
               TryHackMe
             </a>
           </div>
